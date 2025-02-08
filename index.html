@@ -8,225 +8,313 @@
     <meta name="author" content="Bank Central Asia (BCA)">
     <title>Lowongan Kerja BCA | Karir BCA Terbaru 2025</title>
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
 
-        /* Header Styling */
-        header {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 20px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+/* Header Styling */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        header nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
+header .logo a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px; /* Increased margin to add space between logo and menu */
+    animation: logoColorChange 4s infinite; /* Animation to change logo color */
+}
 
-        header .logo a {
-            font-size: 1.8rem;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+@keyframes logoColorChange {
+    0% {
+        color: white;
+    }
+    25% {
+        color: #FF6200;
+    }
+    50% {
+        color: white;
+    }
+    75% {
+        color: #FF6200;
+    }
+    100% {
+        color: white;
+    }
+}
 
-        header ul {
-            list-style: none;
-            display: flex;
-            margin-left: 20px;
-        }
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center menu items */
+    margin-top: 0;
+    padding: 0;
+}
 
-        header ul li {
-            margin-left: 25px;
-            cursor: pointer;
-        }
+header ul li {
+    margin-left: 25px;
+    cursor: pointer;
+}
 
-        header ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
+header ul li:first-child {
+    margin-left: 0; /* Remove left margin from the first item */
+}
 
-        header ul li a:hover {
-            color: #4CAF50;
-        }
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: url('https://images.unsplash.com/photo-1571840615771-acc2e9f42641?q=80&w=1843&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
+header ul li a:hover {
+    color: #FF6200;
+}
 
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
-        }
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/uploads/1413387158190559d80f7/6108b580?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
 
-        .hero-content {
-            z-index: 1;
-            padding: 20px;
-            color: white;
-            max-width: 80%;
-        }
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+}
 
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+    color: white;
+    max-width: 80%;
+}
 
-        .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 30px;
-            opacity: 0.8;
-        }
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
 
-        .cta-btn {
-            background-color: #FF740F;
-            color: white;
-            padding: 12px 35px;
-            font-size: 1.2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
 
-        .cta-btn:hover {
-            background-color: #D4600D;
-            transform: scale(1.05);
-        }
+.cta-btn {
+    background-color: #FF740F;
+    color: white;
+    padding: 12px 35px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-        /* Modal Styling */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
+.cta-btn:hover {
+    background-color: #D4600D;
+    transform: scale(1.05);
+}
 
-        .modal-content {
-            background-color: white;
-            margin: auto;
-            padding: 20px;
-            width: 70%;
-            max-width: 600px;
-            border-radius: 10px;
-        }
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto; /* Menambahkan scroll pada modal jika konten lebih panjang */
+}
 
-        .close {
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
+/* Konten Modal */
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 600px;
+    max-height: 80vh; /* Menentukan batas tinggi modal */
+    overflow-y: auto; /* Scroll vertikal jika konten melebihi batas */
+    border-radius: 10px;
+}
 
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
+/* Tombol Close */
+.close {
+    color: #FF6200;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
 
-        /* Footer Styling */
-        footer {
-            background-color: #000000;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-        footer ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
+/* Footer Styling */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
 
-        footer ul li {
-            display: inline;
-            margin-right: 30px;
-            cursor: pointer;
-        }
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
 
-        footer ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-        }
+footer ul li {
+    display: inline;
+    margin-right: 30px;
+    cursor: pointer;
+}
 
-        footer ul li a:hover {
-            color: #4CAF50;
-        }
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+footer ul li a:hover {
+    color: #FF6200;
+}
 
-            .hero p {
-                font-size: 1rem;
-            }
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
 
-            .cta-btn {
-                padding: 10px 25px;
-                font-size: 1rem;
-            }
+    .hero p {
+        font-size: 1.2rem;
+    }
 
-            header nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    .cta-btn {
+        padding: 10px 30px;
+        font-size: 1.1rem;
+    }
 
-            header ul {
-                flex-direction: column;
-                margin-top: 20px;
-            }
+    header .logo a {
+        font-size: 1.7rem;
+    }
 
-            header ul li {
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
-        }
+    header ul {
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    header .logo a {
+        font-size: 1.5rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    header .logo a {
+        font-size: 1.3rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+}
+
     </style>
 </head>
 <body>
