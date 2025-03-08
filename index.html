@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G2Z5JDJVWQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G2Z5JDJVWQ');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lowongan Kerja Karir BCA 2025 Terbuka Untuk Semua Lulusan Baik Fresh Graduate dan Berpengalaman.">
@@ -9,15 +19,7 @@
     <title>Lowongan Kerja BCA | Karir BCA Terbaru 2025</title>
     <link rel="icon" href="https://logo.clearbit.com/klikbca.com/" type="image/x-icon">
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2Z5JDJVWQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-G2Z5JDJVWQ');
-</script>
+    
     
     <style>
 /* General Reset */
@@ -103,7 +105,7 @@ header ul li a {
 }
 
 header ul li a:hover {
-    color: #0b2b5e;
+    color: #0b2b5e; /* Warna ketika kursor menyentuh element */
 }
 
 /* Hero Section */
@@ -148,7 +150,7 @@ header ul li a:hover {
 }
 
 .cta-btn {
-    background-color: #0066ae;
+    background-color: #0066ae; /* Warna untuk button CTA */
     color: white;
     padding: 12px 35px;
     font-size: 1.2rem;
@@ -158,7 +160,7 @@ header ul li a:hover {
 }
 
 .cta-btn:hover {
-    background-color: #01518a;
+    background-color: #01518a; /* Warna untuk button CTA pada saat kursor menyentuh */
     /* color: #0b2b5e; */
     transform: scale(1.05);
 }
@@ -328,6 +330,167 @@ footer ul li a:hover {
     }
 }
 
+
+/* Job Listings Section (Grid 3 Kolom Horizontal) */
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom dalam satu baris */
+    gap: 20px; /* Memberikan jarak antar elemen */
+    padding: 40px 20px;
+    background-color: #fff; /* Background warna pada saat muncul pop-up deskripsi */
+}
+
+.job-item {
+    background-color: #f8f8f8; /* Background warna pada saat muncul pop-up deskripsi */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Pastikan gambar dalam setiap job item memiliki lebar yang tepat */
+.job-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.job-item h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.job-item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.job-item .apply-btn {
+    background-color: #0066ae;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.job-item .apply-btn:hover {
+    background-color: #01518a;
+    transform: scale(1.05);
+}
+
+/* Modal for Apply Now */
+#applyModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.modal-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+.modal-content #modalTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.modal-content #modalDescription {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Close Button */
+.close {
+    color: #FF6200; /* Warna tombol close pada saat membuka deskripsi */
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .job-listings {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar lebih kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .job-listings {
+        grid-template-columns: 1fr; /* 1 kolom pada layar lebih kecil */
+    }
+}
+
+/* FAQ CSS */
+  .faq-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .faq-item {
+    background-color: #f9f9f9;
+    border-left: 5px solid #0066ae;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    padding: 20px;
+  }
+
+  .faq-item p {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .faq-item a {
+    color: #FF6200;
+    text-decoration: none;
+  }
+
+  .faq-item a:hover {
+    text-decoration: underline;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+
     </style>
 </head>
 <body>
@@ -339,7 +502,7 @@ footer ul li a:hover {
             <a href="https://logo.clearbit.com/klikbca.com/" target="_blank" style="font-size: 1.8rem; color: white; text-decoration: none; font-weight: bold;">Bank Central Asia (BCA)</a>
         </div>
             <ul>
-                <li><a href="#" id="aboutBtn">About Us</a></li>
+                <li><a href="#" id="aboutBtn">About Us</a></li>     
                 <li><a href="#" id="servicesBtn">Services</a></li>
                 <li><a href="#" id="contactBtn">Contact</a></li>
             </ul>
@@ -355,6 +518,382 @@ footer ul li a:hover {
             <a href="#" id="applyBtn" class="cta-btn">APPLY NOW</a>
         </div>
     </section>
+
+
+
+    <!-- Job Listings Section (Grid 3 Kolom) -->
+<section class="job-listings">
+    <div class="job-item">
+        <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?q=80&w=1673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Anchor Cafe & Roastery">
+        <h3>Teller</h3>
+        <p>Menangani transaksi perbankan seperti penyetoran dan penarikan dana.</p>
+        <a href="#" id="applyBtn1" class="cta-btn">APPLY NOW</a>
+    </div>
+    <div class="job-item">
+        <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Teknisi Kereta Api">
+        <h3>Customer Service</h3>
+        <p>Memberikan informasi terkait produk dan layanan BCA.</p>
+        <a href="#" id="applyBtn2" class="cta-btn">APPLY NOW</a>
+    </div>
+    <div class="job-item">
+        <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Staf Administrasi PT. KAI">
+        <h3>Back Office Staff</h3>
+        <p>Mengolah, memverifikasi, dan mengarsipkan dokumen transaksi serta laporan keuangan.</p>
+        <a href="#" id="applyBtn3" class="cta-btn">APPLY NOW</a>
+    </div>
+    <div class="job-item">
+        <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Customer Service PT. KAI">
+        <h3>Relationship Officer (RO)</h3>
+        <p>Membangun dan menjaga hubungan baik dengan nasabah, terutama di segmen bisnis dan komersial.</p>
+        <a href="#" id="applyBtn4" class="cta-btn">APPLY NOW</a>
+    </div>
+    <div class="job-item">
+        <img src="https://images.unsplash.com/photo-1627556704243-5f0771d90783?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ticketing PT. KAI">
+        <h3>Program Pemagangan Bakti</h3>
+        <p>Melayani transaksi perbankan seperti setoran, penarikan, dan transfer.</p>
+        <a href="#" id="applyBtn5" class="cta-btn">APPLY NOW</a>
+    </div>
+    <div class="job-item">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pramugari/Pramugara PT. KAI">
+        <h3>Management Development Program (MDP)</h3>
+        <p>Program pelatihan intensif untuk mempersiapkan calon pemimpin di BCA.</p>
+        <a href="#" id="applyBtn6" class="cta-btn">APPLY NOW</a>
+    </div>
+    <!-- Add more job items as needed -->
+</section>
+
+
+<section>
+  <h2>Orang lain juga bertanya</h2>
+
+  <div itemscope itemtype="https://schema.org/FAQPage">
+    <div class="faq-container">
+      
+            <!-- FAQ Item 1 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara membuka rekening BCA secara online?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Anda dapat membuka rekening BCA secara online melalui aplikasi BCA Mobile atau website BCA. Siapkan dokumen yang diperlukan seperti KTP, NPWP (jika ada), dan ikuti langkah-langkah yang tertera.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Berapa biaya administrasi bulanan untuk rekening BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Biaya administrasi bulanan rekening BCA bervariasi tergantung jenis rekening yang Anda pilih. Informasi lengkap mengenai biaya administrasi dapat dilihat di website resmi BCA atau ditanyakan langsung ke customer service BCA.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara melakukan transfer antar bank melalui BCA Mobile?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Untuk melakukan transfer antar bank melalui BCA Mobile, buka aplikasi BCA Mobile, pilih menu "Transfer", kemudian pilih "Antar Bank". Masukkan nomor rekening tujuan, nominal transfer, dan ikuti instruksi selanjutnya.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apa saja jenis kartu kredit yang ditawarkan oleh BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">BCA menawarkan berbagai jenis kartu kredit dengan benefit yang berbeda-beda, seperti BCA Visa, BCA Mastercard, BCA American Express, dan lain-lain. Informasi detail mengenai fitur dan keuntungan masing-masing kartu kredit dapat dilihat di website BCA.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara melakukan pembayaran tagihan melalui KlikBCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Untuk melakukan pembayaran tagihan melalui KlikBCA, login ke akun KlikBCA Anda, pilih menu "Pembayaran", kemudian pilih jenis tagihan yang ingin dibayarkan. Masukkan nomor pelanggan dan ikuti instruksi selanjutnya.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara mengajukan pinjaman KPR (Kredit Pemilikan Rumah) di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Anda dapat mengajukan pinjaman KPR di BCA dengan mengunjungi kantor cabang BCA terdekat atau melalui website BCA. Siapkan dokumen yang diperlukan seperti KTP, NPWP, slip gaji, dan dokumen properti yang ingin dibeli. Konsultasikan kebutuhan Anda dengan petugas KPR BCA untuk mendapatkan penawaran terbaik.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apa itu fitur OneKlik BCA dan bagaimana cara menggunakannya?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">OneKlik BCA adalah fitur pembayaran online dari BCA yang memungkinkan Anda bertransaksi dengan cepat dan mudah hanya dengan satu klik. Anda perlu mendaftarkan kartu kredit atau debit BCA Anda terlebih dahulu melalui aplikasi atau website merchant yang bekerja sama dengan OneKlik BCA.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 8 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara menghubungi customer service BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Anda dapat menghubungi customer service BCA melalui Halo BCA di nomor 1500888, melalui email di halobca@bca.co.id, atau melalui media sosial resmi BCA.</p>
+        </div>
+      </div>
+
+            <!-- FAQ Item 9 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Posisi apa saja yang tersedia di Bank BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Bank BCA memiliki berbagai posisi, termasuk Teller, Customer Service, Relationship Manager, Analis Kredit, Staf IT, dan berbagai posisi lainnya di bidang operasional dan pendukung bisnis perbankan.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 10 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Posisi apa saja di BCA yang bisa diisi oleh wanita?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Wanita di Bank BCA dapat bekerja di berbagai posisi, termasuk Teller, Customer Service, Relationship Manager, Analis Kredit, Staf IT, dan berbagai posisi manajerial lainnya. BCA memberikan kesempatan yang sama bagi pria dan wanita.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 11 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Lulusan SMA bisa bekerja di posisi apa di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Lulusan SMA dapat melamar untuk posisi Teller atau Customer Service di Bank BCA. Peluang juga terbuka untuk posisi staf administrasi di beberapa unit kerja.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 12 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Relationship Manager BCA biasanya lulusan apa?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Relationship Manager di Bank BCA umumnya memiliki latar belakang pendidikan Sarjana (S1) dari berbagai jurusan, seperti Ekonomi, Manajemen, atau Bisnis. Pengalaman di bidang perbankan atau penjualan juga menjadi nilai tambah.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 13 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Kapan BCA membuka lowongan pekerjaan lagi di tahun 2024?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">BCA membuka lowongan pekerjaan secara berkala sepanjang tahun sesuai dengan kebutuhan. Informasi lowongan pekerjaan dapat dilihat di website karir BCA atau melalui platform rekrutmen online lainnya.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 14 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Siapa pemilik Bank BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Bank BCA adalah bank swasta nasional yang sebagian besar sahamnya dimiliki oleh Grup Djarum.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 15 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apa saja tahapan tes masuk kerja di Bank BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Tahapan tes masuk kerja di Bank BCA umumnya meliputi seleksi administrasi, tes potensi akademik, tes psikologi, wawancara, dan tes kesehatan. Beberapa posisi mungkin memerlukan tes tambahan seperti studi kasus atau presentasi.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 16 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Jurusan apa saja yang dicari oleh Bank BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Bank BCA mencari lulusan dari berbagai jurusan, terutama Ekonomi, Manajemen, Akuntansi, Teknik Informatika, dan jurusan lainnya yang relevan dengan industri perbankan. Peluang juga terbuka bagi lulusan dari disiplin ilmu lain tergantung pada posisi yang dilamar.</p>
+        </div>
+      </div>
+
+            <!-- FAQ Item 17 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Latar belakang pendidikan apa yang cocok untuk menjadi Teller di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Teller di Bank BCA umumnya memiliki latar belakang pendidikan minimal SMA/SMK atau Diploma (D3) dari berbagai jurusan, meskipun jurusan Ekonomi atau Akuntansi seringkali lebih diutamakan.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 18 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Berapa kisaran gaji seorang Teller di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Kisaran gaji seorang Teller di Bank BCA bervariasi tergantung pada lokasi, pengalaman, dan kinerja. Gaji rata-rata berkisar antara IDR 4.000.000 hingga IDR 6.000.000 per bulan.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 19 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Berapa lama pelatihan untuk karyawan baru di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Lama pelatihan untuk karyawan baru di Bank BCA bervariasi tergantung pada posisi yang ditempati. Pelatihan dapat berlangsung dari beberapa minggu hingga beberapa bulan.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 20 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Berapa kisaran gaji seorang Analis Kredit di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Gaji seorang Analis Kredit di Bank BCA bervariasi tergantung pada pengalaman, kualifikasi, dan level jabatan. Gaji rata-rata berkisar antara IDR 7.000.000 hingga IDR 15.000.000 per bulan.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 21 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah BCA menyediakan program magang?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ya, Bank BCA menyediakan program magang bagi mahasiswa dan fresh graduate. Program magang ini memberikan kesempatan untuk belajar dan mengembangkan keterampilan di berbagai bidang perbankan.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 22 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara menyampaikan keluhan atau saran kepada Bank BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Anda dapat menyampaikan keluhan atau saran kepada Bank BCA melalui Halo BCA (1500888), email (halobca@bca.co.id), atau melalui formulir pengaduan yang tersedia di website resmi BCA.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 23 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah BCA menyediakan fasilitas bagi nasabah penyandang disabilitas?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ya, BCA berkomitmen untuk menyediakan layanan yang inklusif bagi semua nasabah, termasuk penyandang disabilitas. BCA menyediakan fasilitas seperti akses kursi roda, prioritas layanan, dan staf yang terlatih untuk membantu nasabah penyandang disabilitas.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 24 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara berkarir di bidang IT di Bank BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Untuk berkarir di bidang IT di Bank BCA, Anda dapat melamar posisi-posisi yang terkait dengan pengembangan software, infrastruktur IT, keamanan siber, atau analisis data. Pastikan Anda memiliki latar belakang pendidikan dan keterampilan yang relevan di bidang IT.</p>
+        </div>
+      </div>
+
+            <!-- FAQ Item 25 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah BCA memiliki program beasiswa untuk mahasiswa?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">BCA memiliki program beasiswa yang disebut "Bakti BCA" yang memberikan dukungan pendidikan kepada mahasiswa berprestasi dari berbagai perguruan tinggi di Indonesia.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 26 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Berapa lama masa percobaan (probation) untuk karyawan baru di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Masa percobaan untuk karyawan baru di BCA umumnya berlangsung selama 3 bulan. Selama masa ini, kinerja karyawan akan dievaluasi untuk menentukan apakah akan diangkat menjadi karyawan tetap.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 27 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah BCA menyediakan asuransi kesehatan untuk karyawan?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ya, BCA menyediakan asuransi kesehatan yang komprehensif untuk seluruh karyawannya, termasuk perlindungan untuk anggota keluarga yang terdaftar.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 28 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara mencari informasi lowongan kerja terbaru di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Untuk informasi lowongan kerja terbaru, Anda dapat mengunjungi website karir BCA atau platform rekrutmen online yang bekerja sama dengan BCA.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 29 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah BCA sering membuka lowongan untuk *fresh graduate*?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ya, BCA secara rutin membuka lowongan untuk *fresh graduate* melalui program Management Trainee (MT) atau posisi entry-level lainnya.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 30 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Posisi apa saja yang umum dibuka di BCA untuk *fresh graduate*?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Beberapa posisi yang umum dibuka untuk *fresh graduate* di BCA antara lain Teller, Customer Service, Relationship Officer, Management Trainee (MT), dan posisi di bidang IT.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 31 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Dokumen apa saja yang perlu dipersiapkan untuk melamar kerja di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Untuk melamar kerja di BCA, Anda perlu mempersiapkan CV terbaru, surat lamaran, foto diri, salinan ijazah dan transkrip nilai, serta dokumen pendukung lainnya sesuai dengan persyaratan lowongan.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 32 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Berapa lama perkiraan waktu yang dibutuhkan untuk proses seleksi di BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Lama proses seleksi di BCA dapat bervariasi tergantung pada posisi yang dilamar, jumlah pelamar, dan tahapan seleksi yang dilakukan. Proses seleksi dapat memakan waktu beberapa minggu hingga beberapa bulan.</p>
+        </div>
+      </div>
+
+            <!-- FAQ Item 33 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah BCA membuka lowongan untuk lulusan non-Ekonomi?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ya, BCA membuka lowongan untuk lulusan dari berbagai disiplin ilmu, tidak hanya Ekonomi. Posisi seperti Staf IT, Marketing, dan Human Resources seringkali membutuhkan keahlian dari latar belakang pendidikan yang berbeda.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 34 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara menghubungi customer service BCA untuk mendapatkan bantuan?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Anda dapat menghubungi customer service BCA melalui Halo BCA di nomor 1500888, email di halobca@bca.co.id, atau melalui media sosial resmi BCA.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 35 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah BCA memiliki program magang untuk mahasiswa?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ya, BCA memiliki program magang yang memberikan kesempatan bagi mahasiswa untuk mendapatkan pengalaman kerja di berbagai divisi perbankan.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 36 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah ada peluang karir di BCA setelah menyelesaikan program magang?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Peserta magang yang menunjukkan kinerja yang baik selama program magang berpotensi untuk mendapatkan tawaran kerja sebagai karyawan tetap di BCA, tergantung pada ketersediaan posisi dan kebutuhan perusahaan.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 37 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apa saja tunjangan yang diberikan BCA kepada karyawannya?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">BCA memberikan berbagai tunjangan kepada karyawannya, termasuk tunjangan kesehatan, tunjangan hari raya (THR), tunjangan transportasi, dan program pensiun.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 38 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah BCA memiliki program kesejahteraan bagi karyawannya?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ya, BCA memiliki program kesejahteraan yang komprehensif bagi karyawannya, termasuk fasilitas kesehatan, program pelatihan dan pengembangan karir, serta berbagai kegiatan sosial dan rekreasi.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 39 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Apakah BCA membuka lowongan untuk posisi di luar negeri?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Sebagian besar posisi di BCA berlokasi di Indonesia. Namun, BCA sebagai bagian dari grup perbankan yang lebih besar mungkin memiliki peluang karir internasional melalui anak perusahaan atau kerjasama dengan bank lain.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 40 -->
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Bagaimana cara memantau status lamaran kerja yang sudah diajukan ke BCA?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Anda dapat memantau status lamaran kerja Anda melalui akun yang telah Anda buat di portal rekrutmen BCA, atau melalui email pemberitahuan yang dikirimkan oleh tim rekrutmen BCA.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Footer -->
     <footer>
@@ -521,6 +1060,305 @@ Menara BCA, Grand Indonesia. Jl. MH Thamrin No. 1. Jakarta 10310</p>
         </div>
     </div>
 
+    <!-- Modal Apply Teller -->
+<div id="modal-apply1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Teller</h2>
+        <br>
+        <h3>Deskripsi Pekerjaan:</h3>
+        <ul>
+            <li>Melayani transaksi keuangan nasabah dengan ramah dan efisien.</li>
+            <li>Memproses setoran, penarikan, transfer, dan pembayaran tagihan.</li>
+            <li>Memastikan keakuratan dan keamanan dalam setiap transaksi.</li>
+            <li>Menangani keluhan dan pertanyaan nasabah dengan profesional.</li>
+            <li>Menjaga kebersihan dan kerapihan area kerja.</li>
+            <li>Melakukan perhitungan dan penutupan kas harian.</li>
+        </ul>
+        <br>
+        <h3>Kualifikasi:</h3>
+        <ul>
+            <li>Pendidikan minimal <strong>SMA/SMK</strong>, diutamakan lulusan D3/S1 jurusan Ekonomi, Akuntansi, atau Perbankan.</li>
+            <li>Memiliki pengalaman sebagai Teller minimal 1 tahun (lebih disukai).</li>
+            <li>Memiliki kemampuan komunikasi dan interpersonal yang baik.</li>
+            <li>Teliti, jujur, dan bertanggung jawab.</li>
+            <li>Mampu bekerja secara tim maupun individu.</li>
+            <li>Berpenampilan menarik dan rapi.</li>
+            <li>Menguasai Ms. Office (terutama Excel dan Word).</li>
+        </ul>
+        <br>
+        <h3>Informasi Tambahan:</h3>
+        <ul>
+            <li><strong>Lokasi:</strong> Kota/Cabang seluruh Indonesia</li>
+            <li><strong>Jenis Pekerjaan:</strong> Full-time</li>
+            <li><strong>Gaji:</strong> Kompetitif (sesuai pengalaman)</li>
+        </ul>
+        <br>
+        <p>Kirimkan lamaran dan CV terbaru Anda ke alamat email: <a href="mailto:recruitment@bca.co.id">recruitment@bca.co.id</a></p>
+        <p>Atau kunjungi website karir kami di: <a href="https://karir.bca.co.id/" target="_blank">karir.bca.co.id</a></p>
+        <br/>
+    </div>
+</div>
+
+<!-- Modal Apply Customer Service -->
+<div id="modal-apply2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Customer Service</h2>
+        <br>
+        <h3>Deskripsi Pekerjaan:</h3>
+        <ul>
+            <li>Melayani pelanggan melalui telepon, email, chat, dan media sosial.</li>
+            <li>Menjawab pertanyaan, memberikan informasi produk/layanan, dan menyelesaikan masalah pelanggan.</li>
+            <li>Mencatat dan mendokumentasikan interaksi dan keluhan pelanggan.</li>
+            <li>Menindaklanjuti masalah pelanggan hingga tuntas.</li>
+            <li>Memberikan solusi yang tepat dan efektif untuk memenuhi kebutuhan pelanggan.</li>
+            <li>Membangun hubungan baik dengan pelanggan untuk meningkatkan kepuasan dan loyalitas.</li>
+            <li>Berkoordinasi dengan departemen lain untuk menyelesaikan masalah pelanggan yang kompleks.</li>
+        </ul>
+        <br>
+        <h3>Kualifikasi:</h3>
+        <ul>
+            <li>Pendidikan minimal <strong>SMA/SMK</strong>, diutamakan lulusan D3/S1 semua jurusan.</li>
+            <li>Memiliki pengalaman sebagai Customer Service minimal 1 tahun (lebih disukai).</li>
+            <li>Memiliki kemampuan komunikasi yang sangat baik, baik lisan maupun tulisan.</li>
+            <li>Ramah, sabar, dan memiliki kemampuan mendengarkan yang baik.</li>
+            <li>Mampu bekerja secara mandiri maupun dalam tim.</li>
+            <li>Menguasai penggunaan komputer dan aplikasi perkantoran (Ms. Office).</li>
+            <li>Memiliki kemampuan problem-solving yang baik.</li>
+            <li>Bersedia bekerja shift (jika diperlukan).</li>
+        </ul>
+        <br>
+        <h3>Informasi Tambahan:</h3>
+        <ul>
+            <li><strong>Lokasi:</strong> Kota/Cabang seluruh Indonesia</li>
+            <li><strong>Jenis Pekerjaan:</strong> Full-time</li>
+            <li><strong>Gaji:</strong> Negosiasi</li>
+        </ul>
+        <br>
+        <p>Kirimkan lamaran dan CV terbaru Anda ke alamat email: <a href="mailto:recruitment@bca.co.id">recruitment@bca.co.id</a></p>
+        <p>Atau kunjungi website karir kami di: <a href="https://karir.bca.co.id/" target="_blank">karir.bca.co.id</a></p>
+        <br>
+        
+    </div>
+</div>
+
+<!-- Modal Apply Back Office Staff -->
+<div id="modal-apply3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Back Office Staff</h2>
+        <br>
+        <h3>Deskripsi Pekerjaan:</h3>
+        <ul>
+            <li>Melakukan tugas-tugas administratif dan operasional untuk mendukung kelancaran operasional perusahaan.</li>
+            <li>Memproses dan mengelola data, dokumen, dan informasi perusahaan.</li>
+            <li>Menyiapkan laporan rutin dan ad-hoc sesuai kebutuhan.</li>
+            <li>Melakukan pengarsipan dan penyimpanan dokumen dengan rapi dan teratur.</li>
+            <li>Menangani korespondensi dan komunikasi internal maupun eksternal.</li>
+            <li>Melakukan koordinasi dengan departemen lain untuk memastikan kelancaran proses bisnis.</li>
+            <li>Membantu dalam pengelolaan inventaris dan perlengkapan kantor.</li>
+        </ul>
+        <br>
+        <h3>Kualifikasi:</h3>
+        <ul>
+            <li>Pendidikan minimal <strong>SMA/SMK</strong>, diutamakan lulusan D3/S1 semua jurusan (Administrasi, Manajemen, Akuntansi lebih disukai).</li>
+            <li>Memiliki pengalaman minimal 1 tahun di bidang administrasi atau back office (lebih disukai).</li>
+            <li>Menguasai penggunaan komputer dan aplikasi perkantoran (Ms. Office: Word, Excel, PowerPoint).</li>
+            <li>Memiliki kemampuan komunikasi yang baik, baik lisan maupun tulisan.</li>
+            <li>Teliti, rapi, dan terorganisir.</li>
+            <li>Mampu bekerja secara mandiri maupun dalam tim.</li>
+            <li>Memiliki kemampuan problem-solving yang baik.</li>
+            <li>Memiliki inisiatif dan proaktif.</li>
+        </ul>
+        <br>
+        <h3>Informasi Tambahan:</h3>
+        <ul>
+            <li><strong>Lokasi:</strong> Kota/Area seluruh Indonesia</li>
+            <li><strong>Jenis Pekerjaan:</strong> Full-time</li>
+            <li><strong>Gaji:</strong> Negosiasi</li>
+            <li><strong>Benefit:</strong> Asuransi Kesehatan, BPJS, dll.</li>
+        </ul>
+        <br>
+        <p>Kirimkan lamaran dan CV terbaru Anda ke alamat email: <a href="mailto:recruitment@bca.co.id">recruitment@bca.co.id</a></p>
+        <p>Atau kunjungi website karir kami di: <a href="https://karir.bca.co.id/" target="_blank">karir.bca.co.id</a></p>
+        
+    </div>
+</div>
+
+<!-- Modal Apply Relationship Officer -->
+<div id="modal-apply4" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Relationship Officer (RO)</h2>
+        <br>
+        <h3>Deskripsi Pekerjaan:</h3>
+        <ul>
+            <li>Membangun dan memelihara hubungan baik dengan nasabah.</li>
+            <li>Mengidentifikasi kebutuhan nasabah dan menawarkan solusi keuangan yang sesuai.</li>
+            <li>Mencapai target penjualan produk dan layanan perbankan.</li>
+            <li>Melakukan kunjungan rutin ke nasabah untuk menjaga hubungan dan menawarkan produk baru.</li>
+            <li>Memberikan pelayanan yang prima kepada nasabah.</li>
+            <li>Memproses aplikasi pinjaman dan produk perbankan lainnya.</li>
+            <li>Memantau kinerja portofolio nasabah dan mengambil tindakan yang diperlukan.</li>
+        </ul>
+        <br>
+        <h3>Kualifikasi:</h3>
+        <ul>
+            <li>Pendidikan minimal S1 semua jurusan (diutamakan Ekonomi, Manajemen, atau Perbankan).</li>
+            <li>Memiliki pengalaman minimal 1 tahun sebagai Relationship Officer atau di bidang penjualan (lebih disukai).</li>
+            <li>Memiliki kemampuan komunikasi, negosiasi, dan interpersonal yang sangat baik.</li>
+            <li>Berorientasi pada target dan mampu bekerja di bawah tekanan.</li>
+            <li>Memiliki pengetahuan tentang produk dan layanan perbankan.</li>
+            <li>Memiliki jaringan yang luas (nilai tambah).</li>
+            <li>Berpenampilan menarik dan profesional.</li>
+            <li>Memiliki SIM C dan kendaraan pribadi (diutamakan).</li>
+        </ul>
+        <br>
+        <h3>Informasi Tambahan:</h3>
+        <ul>
+            <li><strong>Lokasi:</strong> Kota/Cabang seluruh Indonesia</li>
+            <li><strong>Jenis Pekerjaan:</strong> Full-time</li>
+            <li><strong>Gaji:</strong> Gaji Pokok + Insentif</li>
+            <li><strong>Benefit:</strong> Tunjangan Transportasi, Tunjangan Kesehatan, Insentif, BPJS, dll.</li>
+        </ul>
+        <br>
+        <p>Kirimkan lamaran dan CV terbaru Anda ke alamat email: <a href="mailto:recruitment@bca.co.id">recruitment@bca.co.id</a></p>
+        <p>Atau kunjungi website karir kami di: <a href="https://karir.bca.co.id/" target="_blank">karir.bca.co.id</a></p>
+    </div>
+</div>
+
+<!-- Modal Apply Program Pemagangan Bakti -->
+<div id="modal-apply5" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Program Pemagangan Bakti</h2>
+        <br>
+        <h3>Deskripsi Program:</h3>
+        <ul>
+            <li>Program pemagangan yang memberikan kesempatan bagi generasi muda untuk mengembangkan keterampilan dan pengetahuan di bidang perbankan.</li>
+            <li>Peserta akan mendapatkan pengalaman kerja langsung di berbagai unit kerja di [Nama Bank].</li>
+            <li>Mendapatkan pelatihan dan pembekalan untuk meningkatkan kompetensi.</li>
+            <li>Membantu peserta mempersiapkan diri untuk memasuki dunia kerja profesional.</li>
+            <li>Durasi program: [Durasi Program - Contoh: 12 bulan].</li>
+        </ul>
+        <br>
+        <h3>Posisi yang Tersedia:</h3>
+        <ul>
+            <li>Teller (Bakti Teller)</li>
+            <li>Customer Service (Bakti Customer Service)</li>
+            <li>Administrasi (Bakti Administrasi)</li>
+            <li>(Dapat ditambahkan posisi lain sesuai kebutuhan)</li>
+        </ul>
+        <br>
+        <h3>Kualifikasi:</h3>
+        <ul>
+            <li>Warga Negara Indonesia (WNI).</li>
+            <li>Usia minimal 18 tahun dan maksimal [Usia Maksimal - Contoh: 24 tahun].</li>
+            <li>Pendidikan minimal SMA/SMK/D3/S1 (sesuai dengan posisi yang dilamar).</li>
+            <li>Belum menikah.</li>
+            <li>Berpenampilan menarik dan memiliki kemampuan komunikasi yang baik.</li>
+            <li>Sehat jasmani dan rohani.</li>
+            <li>Tidak memiliki catatan kriminal.</li>
+            <li>Bersedia mengikuti seluruh rangkaian program pemagangan.</li>
+        </ul>
+        <br>
+        <h3>Benefit:</h3>
+        <ul>
+            <li>Uang saku.</li>
+            <li>Sertifikat pemagangan.</li>
+            <li>Pengalaman kerja di lingkungan perbankan.</li>
+            <li>Pelatihan dan pengembangan diri.</li>
+            <li>Potensi untuk diangkat menjadi karyawan tetap (berdasarkan kinerja).</li>
+        </ul>
+        <br>
+        <h3>Cara Mendaftar:</h3>
+        <ul>
+            <li>Kunjungi website karir Bank BCA: <a href="https://karir.bca.co.id/" target="_blank">karir.bca.co.id</a></li>
+            <li>Pilih Program Pemagangan Bakti.</li>
+            <li>Isi formulir pendaftaran secara online.</li>
+            <li>Unggah dokumen yang diperlukan:</li>
+                <ul>
+                    <li>CV/Resume</li>
+                    <li>Scan KTP</li>
+                    <li>Scan Ijazah/Surat Keterangan Lulus</li>
+                    <li>Foto terbaru</li>
+                </ul>
+            <p>Alamat email: <a href="mailto:recruitment@bca.co.id">recruitment@bca.co.id</a></p>
+        </ul>
+        
+    </div>
+</div>
+
+<!-- Modal Apply Management Development Program (MDP) -->
+<div id="modal-apply6" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Management Development Program (MDP)</h2>
+        <br>
+        <h3>Deskripsi Program:</h3>
+        <ul>
+            <li>Program akselerasi karir yang dirancang untuk mengembangkan pemimpin masa depan [Nama Perusahaan].</li>
+            <li>Peserta akan mendapatkan pelatihan intensif, rotasi di berbagai departemen, dan mentoring dari para pemimpin senior.</li>
+            <li>Program ini bertujuan untuk mempersiapkan peserta untuk memegang posisi manajerial strategis di perusahaan.</li>
+            
+        </ul>
+        <br>
+        <h3>Area Rotasi (Contoh):</h3>
+        <ul>
+            <li>Marketing</li>
+            <li>Finance</li>
+            <li>Operations</li>
+            <li>Human Resources</li>
+            
+        </ul>
+        <br>
+        <h3>Kualifikasi:</h3>
+        <ul>
+            <li>Pendidikan minimal S1 dari semua jurusan (diutamakan Ekonomi, Manajemen, Teknik Industri, atau jurusan relevan lainnya).</li>
+            <li>IPK minimal 3.50 dari skala 4.00.</li>
+            <li>Usia maksimal 27 tahun.</li>
+            <li>Memiliki pengalaman organisasi atau kepanitiaan yang aktif selama kuliah.</li>
+            <li>Memiliki kemampuan analisis, problem-solving, dan pengambilan keputusan yang baik.</li>
+            <li>Memiliki kemampuan komunikasi, interpersonal, dan leadership yang sangat baik.</li>
+            <li>Berorientasi pada hasil dan memiliki motivasi yang tinggi untuk berkembang.</li>
+            <li>Bersedia ditempatkan di seluruh wilayah operasional Bank BCA.</li>
+            <li>Menguasai Bahasa Inggris aktif (lisan dan tulisan).</li>
+        </ul>
+        <br>
+        <h3>Benefit:</h3>
+        <ul>
+            <li>Gaji dan tunjangan yang kompetitif.</li>
+            <li>Pelatihan intensif dari para ahli.</li>
+            <li>Mentoring dari para pemimpin senior.</li>
+            <li>Kesempatan untuk mengembangkan karir di posisi manajerial.</li>
+            <li>Rotasi di berbagai departemen untuk mendapatkan pengalaman yang luas.</li>
+            <li>Asuransi kesehatan dan benefit lainnya.</li>
+        </ul>
+        <br>
+        <h3>Cara Mendaftar:</h3>
+        <ul>
+            <li>Kunjungi website karir Bank BCA: <a href="https://karir.bca.co.id/" target="_blank">karir.bca.co.id</a></li>
+            <li>Cari lowongan "Management Development Program (MDP)".</li>
+            <li>Klik "Apply Now" dan ikuti instruksi selanjutnya.</li>
+            <li>Siapkan dokumen-dokumen berikut:</li>
+                <ul>
+                    <li>CV/Resume</li>
+                    <li>Transkrip Nilai</li>
+                    <li>Ijazah</li>
+                    <li>Surat Lamaran</li>
+                    <li>Sertifikat (jika ada)</li>
+                    <li>Foto terbaru</li>
+                </ul>
+            <p>Alamat email: <a href="mailto:recruitment@bca.co.id">recruitment@bca.co.id</a></p>
+        </ul>
+        
+    </div>
+</div>
+
+
+
+
     <script>
         // Modal functionality for Header
         function showModal(modalId) {
@@ -542,6 +1380,14 @@ Menara BCA, Grand Indonesia. Jl. MH Thamrin No. 1. Jakarta 10310</p>
         // Apply Modals
        document.getElementById('applyBtn').addEventListener('click', () => showModal('modal-apply'));
 
+       // Apply Modals
+       document.getElementById('applyBtn1').addEventListener('click', () => showModal('modal-apply1'));
+       document.getElementById('applyBtn2').addEventListener('click', () => showModal('modal-apply2'));
+       document.getElementById('applyBtn3').addEventListener('click', () => showModal('modal-apply3'));
+       document.getElementById('applyBtn4').addEventListener('click', () => showModal('modal-apply4'));
+       document.getElementById('applyBtn5').addEventListener('click', () => showModal('modal-apply5'));
+       document.getElementById('applyBtn6').addEventListener('click', () => showModal('modal-apply6'));
+
         // Header Modals
         document.getElementById('aboutBtn').addEventListener('click', () => showModal('modal-about'));
         document.getElementById('servicesBtn').addEventListener('click', () => showModal('modal-services'));
@@ -553,76 +1399,6 @@ Menara BCA, Grand Indonesia. Jl. MH Thamrin No. 1. Jakarta 10310</p>
         document.getElementById('termsFooterBtn').addEventListener('click', () => showModal('modal-footer-terms'));
     </script>
     
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "JobPosting",
-  "title": "Info Lowongan Kerja Bank BCA | Karir BCA 2025 Lulusan SMA/SMK & Fresh Graduate",
-  "description": "Wujudkan karir impianmu di Bank BCA pada tahun 2025! Kami membuka kesempatan emas bagi lulusan SMA/SMK & Fresh Graduate untuk bergabung dalam tim perbankan terkemuka. Daftar sekarang dan raih pengalaman berharga serta kembangkan keahlianmu bersama para ahli di industri ini. Jangan lewatkan peluang langka ini untuk membangun fondasi karir yang kokoh dan berkontribusi pada kemajuan perbankan Indonesia. Klik disini untuk melamar dan jadilah bagian dari keluarga besar BCA yang inovatif dan terpercaya.",
-  "identifier": {
-    "@type": "PropertyValue",
-    "name": "Bank Central Asia",
-    "value": "BCA-2025-001"
-  },
-  "datePosted": "2025-02-01",
-  "validThrough": "2025-06-30T23:59:59Z",
-  "employmentType": "FULL_TIME, CONTRACTOR, INTERNSHIP, PART_TIME, FREELANCE",
-  "hiringOrganization": {
-    "@type": "Organization",
-    "name": "Bank Central Asia (BCA)",
-    "sameAs": "https://www.bca.co.id",
-    "logo": "https://logo.clearbit.com/klikbca.com/"
-  },
-  "jobLocation": {
-    "@type": "Place",
-    "name": "Seluruh Indonesia",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Indonesia",
-      "postalCode": "12345",
-      "addressRegion": "Indonesia",
-      "streetAddress": "Indonesia",
-      "addressCountry": "ID"
-    }
-  },
-  "jobBenefits": "Asuransi kesehatan, tunjangan hari raya, kesempatan untuk berkembang di industri perbankan",
-  "qualifications": {
-    "@type": "OccupationalCredential",
-    "credentialCategory": "SMA/SMK",
-    "educationalCredentialAwarded": "SMA/SMK atau Fresh Graduate"
-  },
-  "responsibilities": "Bertanggung jawab dalam berbagai posisi operasional di BCA, seperti Teller, Customer Service, dan posisi lainnya yang mendukung operasional perbankan.",
-  "skills": [
-    "Kemampuan komunikasi yang baik",
-    "Kemampuan bekerja dalam tim",
-    "Kemampuan melayani pelanggan",
-    "Ketelitian dan akurasi"
-  ],
-  "baseSalary": {
-    "@type": "MonetaryAmount",
-    "currency": "IDR",
-    "value": {
-      "@type": "QuantitativeValue",
-      "value": 165600.00,
-      "unitText": "DAY"
-    }
-  },
-  "url": "https://karir.bca.co.id/candidate/id/career",
-  "applicationContact": {
-    "@type": "ContactPoint",
-    "contactType": "Recruitment",
-    "telephone": "+6221-29980999",
-    "email": "halo_bca@bca.co.id",
-    "areaServed": "ID",
-    "availableLanguage": "ID"
-  },
-  "experienceRequirements": "Tidak diperlukan pengalaman kerja sebelumnya. Fresh Graduate diterima.",
-  "educationRequirements": "Minimal lulusan SMA/SMK dari jurusan yang relevan.",
-  "workHours": "40 jam per minggu",
-  "jobFunction": "Operasional Perbankan"
-}
-</script>
 
 </body>
 </html>
